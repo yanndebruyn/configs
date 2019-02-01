@@ -1,0 +1,50 @@
+de_weg_naar_eenheidsbewustzijn.pdf
+rename de_weg_naar_eenheidsbewustzijn.pdf
+shell mkdir TEST
+shell rm test
+shell rm -r TEST_0
+shell cd /etc
+shell cd ..
+pwd
+shell pwd
+search tes
+mv test tests
+search rt
+mv rtfm test
+rename test
+touch file
+copy file  test
+copy file test/
+copy file 
+copy file j
+copy file ./test
+copy file test
+rename ../../tests
+bulkrename 
+mkdir test
+touch test
+shell touch test
+ls
+shell ll
+mkdir Test
+touch another
+shell rm another
+copy %f Test
+copy %s Test
+search Tes
+search test
+copy Test
+copy test Test
+flat
+flat 1
+flat 2
+flat 3
+flat 0
+mkdir jokedebruyn.be
+mkdir ydur.org
+mkdir heartfeltwebsites.com
+mkdir yanndebruyn.com
+mkdir dezielsboom.com
+delete
+
+mkdir gitprojects
