@@ -1,0 +1,11 @@
+there's a caveat: some of the files are overwritten by xfce even if you don't
+select the "Save session" when logging out. Also, some of the files are loaded
+in Xfconf and they're not refreshed until you restart.
+
+Because of that, please follow the steps:
+
+- Log out of xfce before copying the files
+- Copy the files from the terminal (CTRL-ALT-F1)
+- Make sure the proper permissions are set on copied files (they should belong to
+   wanted user; if not, do chown -R user:group .config/xfce4)
+- Then restart the computer (do not relogin immediately, but restart)
