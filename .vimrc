@@ -6,7 +6,7 @@ filetype off                  " required
 
 
 " =======================
-	"  GENERAL CONFIGURATIONS
+"  GENERAL CONFIGURATIONS
 " =======================
 
 " Timeout length
@@ -140,7 +140,6 @@ nnoremap <S-j> :wincmd j<CR>
 nnoremap <S-k> :wincmd k<CR>
 nnoremap <S-l> :wincmd l<CR>
 nnoremap <S-q> :close<CR>
-" :map <Leader>e <C-w>=
 nnoremap <C-w> :sp<CR>
 nnoremap <S-s> :vs<CR>
 nnoremap <S-x> <C-w>=
