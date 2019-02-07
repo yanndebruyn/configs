@@ -34,6 +34,6 @@ ScrollingBar=TERMINAL_SCROLLBAR_NONE
 BackgroundImageFile=/usr/share/xfce4/backdrops/336309-free-download-blue-grunge-background-1920x1080-download.jpg
 BackgroundImageShading=0,800000
 BackgroundImageStyle=TERMINAL_BACKGROUND_STYLE_CENTERED
-ColorPalette=rgb(25,25,35);rgb(204,0,0);rgb(78,154,6);rgb(196,160,0);rgb(52,101,164);rgb(117,80,123);rgb(6,152,154);rgb(172,172,172);rgb(50,50,50);rgb(239,41,41);rgb(138,226,52);rgb(226,207,53);rgb(115,159,207);rgb(173,127,168);rgb(52,226,226);rgb(238,238,236)
+ColorPalette=rgb(25,25,35);rgb(204,0,0);rgb(78,154,6);rgb(196,160,0);rgb(52,101,164);rgb(117,80,123);rgb(6,152,154);rgb(172,172,172);rgb(80,80,90);rgb(239,41,41);rgb(138,226,52);rgb(226,207,53);rgb(115,159,207);rgb(173,127,168);rgb(52,226,226);rgb(238,238,236)
 ColorBackground=rgb(1,14,25)
 
