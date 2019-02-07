@@ -4,6 +4,7 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
   
 
+
 " =======================
 "  GENERAL CONFIGURATIONS
 " =======================
@@ -45,7 +46,7 @@ hi LineNr  ctermfg=DarkGrey ctermbg=NONE
 
 "set and style cursor line:
 set cursorline
-hi CursorLine  cterm=bold ctermbg=Black 
+hi CursorLine  cterm=bold ctermbg=Black
 "style vertical split line:
 hi VertSplit  ctermfg=DarkGrey ctermbg=Black 
 "set vertical split line character:
@@ -63,7 +64,7 @@ set colorcolumn=81 "display column at textwidth
 hi ColorColumn ctermbg=Black
 
 " Matching bracket color
-hi MatchParen cterm=none ctermbg=magenta ctermfg=white
+hi MatchParen cterm=bold ctermbg=DarkRed ctermfg=white
 
 
 " Searching
@@ -72,7 +73,7 @@ set hlsearch   "highligh matches
 
 
 "Change highlight color
-hi Search ctermfg=White ctermbg=Magenta
+hi Search ctermfg=White ctermbg=DarkMagenta
 hi IncSearch ctermfg=White ctermbg=Red
 hi Visual gui=NONE guibg=White guifg=Black
 
