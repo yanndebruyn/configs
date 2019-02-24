@@ -1,0 +1,27 @@
+#!/bin/bash
+
+# Left click
+if [[ "${BLOCK_BUTTON}" -eq 1 ]]; then
+  numlockx toggle
+# Right click
+elif [[ "${BLOCK_BUTTON}" -eq 3 ]]; then
+  numlockx toggle
+fi
+
+XSET_OUTPUT=$(xset q | grep LED)
+NUMLOCK_BIT=${XSET_OUTPUT: -1}
+
+if [[ $NUMLOCK_BIT = "2" ]]; then
+	echo "ON"
+	echo "ON"
+	echo ""
+else
+	echo "OFF"
+	echo "OFF"
+	echo ""
+fi
+
+
+
+
+
