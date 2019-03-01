@@ -1,50 +1,50 @@
-de_weg_naar_eenheidsbewustzijn.pdf
-rename de_weg_naar_eenheidsbewustzijn.pdf
-shell mkdir TEST
-shell rm test
-shell rm -r TEST_0
-shell cd /etc
-shell cd ..
-pwd
-shell pwd
-search tes
-mv test tests
-search rt
-mv rtfm test
-rename test
-touch file
-copy file  test
-copy file test/
-copy file 
-copy file j
-copy file ./test
-copy file test
-rename ../../tests
-bulkrename 
-mkdir test
-touch test
-shell touch test
-ls
-shell ll
-mkdir Test
-touch another
-shell rm another
-copy %f Test
-copy %s Test
-search Tes
-search test
-copy Test
-copy test Test
-flat
-flat 1
-flat 2
-flat 3
-flat 0
-mkdir jokedebruyn.be
-mkdir ydur.org
 mkdir heartfeltwebsites.com
 mkdir yanndebruyn.com
 mkdir dezielsboom.com
-delete
-
 mkdir gitprojects
+shell git add .
+search .conf
+set colorscheme zenburn
+set colorscheme default
+rename Downloads
+rename AbrahamQ
+touch test
+search test
+open_with 
+help
+tab_new
+tab_new scripts
+tab_new ~/Documents
+
+search *.png
+search ranger
+mkdir
+rename history
+rename colorschemes
+mkdir 
+set viewmode multipane
+set viewmode miller
+rename i_am_the_universe.jpg
+rename reis
+rename conscious_universe.jpg
+shell feh -B black %f
+rename cons
+rename conscious_universe2.jpg
+rename levenslessen-presentatie.tex
+search dark
+search
+shell scr
+shell scrot -e 'mv $f ~/Pictures/screenshots/'
+rename bookmarks2.html
+rename bookmarks.html
+touch 
+rename 
+jkjj
+delete
+tab_new %f
+shell 
+find 
+find 1
+find Proof
+find Sa
+find j

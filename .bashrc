@@ -118,20 +118,21 @@ fi
 # make bash behave like vim
 set -o vi
 
-# bind CTRL to CAPS LOCK
-   setxkbmap -layout us -option ctrl:nocaps
-   xmodmap -e 'clear Lock'
-   xmodmap -e 'keycode 0x7e = Control_R'
-   xmodmap -e 'add Control = Control_R'
- 
+# Set default editor
 EDITOR=vim
 export EDITOR
 
 # Apply dircolors set in ~/.dircolors
 eval "`dircolors -b ~/.dircolors`"
 
+# Style bash prompt
 PS1="\[\e]0;\u@\h:\w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;36m\][\[\033[01;31m\]\u\[\033[01;33m\]@\[\033[01;32m\]\h\[\033[01;36m\]]\[\033[00m\]:\[\033[01;36m\]\W\[\033[00m\] $ "
 
+# Enable Fuzzy finder in bash
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
+# Disable terminal freeze on pressing CTRL-s
+stty -ixon
 
-
+# feh alias
+alias feh='feh --image-bg black'

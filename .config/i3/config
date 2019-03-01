@@ -15,6 +15,14 @@ set $mod Mod1
 # is used in the bar {} block below.
 font pango:monospace 8
 
+for_window [class="Google-chrome"] border 1px
+for_window [class="google-chrome"] border 1px
+for_window [class="qutebrowser"] border 1px
+for_window [class="Thunderbird"] border 1px
+for_window [class="Gimp"] border 1px
+for_window [class="vlc"] border 1px
+for_window [class="mpv"] border 1px
+
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:DejaVu Sans Mono 8
@@ -51,7 +59,8 @@ bindsym $mod+Shift+Control+x exec i3lock --tiling --color=#222222 --image=~/Pict
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+r exec dmenu_run -fn 'monospace:bold:pixelsize=25' -l 27
+bindsym $mod+d exec dmenu_run -fn 'monospace:bold:pixelsize=25' -l 27
+
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -75,11 +84,8 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
-# split in horizontal orientation
-bindsym $mod+v split h
-
-# split in vertical orientation
-bindsym $mod+b split v
+# toggle layout split
+bindsym $mod+b split toggle
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -96,7 +102,7 @@ bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
 
 # focus the parent container
-bindsym $mod+a focus parent
+bindsym $mod+Shift+a focus parent
 
 # focus the child container
 #bindsym $mod+d focus child
@@ -105,29 +111,31 @@ set $workspace0 "0:Laptop"
 set $workspace1 "1:Terminals"
 set $workspace2 "2:Qutebrowser"
 set $workspace3 "3:Ranger"
-set $workspace4 "4:Chrome"
+set $workspace4 "4:Docs"
 set $workspace5 "5:Mail"
 set $workspace6 "6:Gimp"
-set $workspace7 "7:Docs"
+set $workspace7 "7:"
 set $workspace8 "8:Media"
 set $workspace9 "9:Calendar"
 set $workspace10 "10:Organizer"
-set $workspace11 "11:"
+set $workspace11 "11:Vim"
+set $workspace12 "12:Chrome"
+set $workspace13 "13:Firefox"
 
 # Application shortcuts
-bindsym $mod+Control+1 workspace $workspace1; exec xfce4-terminal -e "vim /home/yann/.config/i3/config"
-bindsym $mod+Control+3 workspace $workspace1; exec xfce4-terminal -e "vim /home/yann/.config/ranger/rc.conf"
-bindsym $mod+Control+2 workspace $workspace1; exec xfce4-terminal -e "vim /home/yann/.config/i3/i3blocks.conf"
-bindsym $mod+Control+r workspace $workspace3; exec xfce4-terminal -e ranger
-bindsym $mod+Control+m workspace $workspace8; exec xfce4-terminal -e cmus
-bindsym $mod+Control+x exec firefox
-bindsym $mod+Control+q exec qutebrowser
-bindsym $mod+Control+t exec thunderbird
-bindsym $mod+Control+g exec gimp
-bindsym $mod+Control+v exec vlc
-bindsym $mod+Control+c exec google-chrome-stable
+bindsym $mod+Control+c exec ~/scripts/dmenu_select_configs.sh
+bindsym $mod+Control+w exec ~/scripts/dmenu_select_webdev.sh
+bindsym $mod+r workspace $workspace3; exec xfce4-terminal -e ranger
+bindsym $mod+m workspace $workspace8; exec xfce4-terminal -e cmus
+bindsym $mod+x exec firefox
+bindsym $mod+q exec qutebrowser
+bindsym $mod+t exec thunderbird
+bindsym $mod+g exec gimp
+bindsym $mod+v exec vlc
+bindsym $mod+c exec google-chrome-stable
 bindsym $mod+Control+d exec google-chrome-stable --new-window https://docs.google.com/document/
-bindsym $mod+Control+o exec google-chrome-stable --new-window docs.google.com/spreadsheets/d/1x6u9MuJdh-icI-1UPC7TRsg75CQdGAVHc_9amf_dPaA/edit#gid=583359177
+bindsym $mod+o exec google-chrome-stable --new-window https://docs.google.com/spreadsheets/d/1x6u9MuJdh-icI-1UPC7TRsg75CQdGAVHc_9amf_dPaA/edit#gid=583359177
+bindsym $mod+a exec google-chrome-stable --new-window https://calendar.google.com/calendar/r
 
 # Switch mono and dual monitor setup
 bindsym $mod+F11 exec xrandr --output LVDS-1 --primary --mode 1600x900 --pos 0x180 --rotate normal --output DP-1 --off --output HDMI-1 --off --output VGA-1 --off
@@ -147,6 +155,8 @@ bindsym $mod+8 workspace $workspace8
 bindsym $mod+9 workspace $workspace9
 bindsym $mod+0 workspace $workspace10
 bindsym $mod+F1 workspace $workspace11
+bindsym $mod+F2 workspace $workspace12
+bindsym $mod+F3 workspace $workspace13
 
 # move focused container to workspace
 bindsym $mod+Shift+grave move container to workspace $workspace0
@@ -161,6 +171,8 @@ bindsym $mod+Shift+8 move container to workspace $workspace8
 bindsym $mod+Shift+9 move container to workspace $workspace9
 bindsym $mod+Shift+0 move container to workspace $workspace10
 bindsym $mod+Shift+F1 move container to workspace $workspace11
+bindsym $mod+Shift+F2 move container to workspace $workspace12
+bindsym $mod+Shift+F3 move container to workspace $workspace13
 
 bindsym $mod+Control+l move workspace to output right
 bindsym $mod+Control+h move workspace to output left
@@ -177,14 +189,18 @@ workspace $workspace8 output $PRIMARY
 workspace $workspace9 output $PRIMARY
 workspace $workspace10 output $PRIMARY
 workspace $workspace11 output $PRIMARY
+workspace $workspace12 output $PRIMARY
+workspace $workspace13 output $PRIMARY
 
 # Always open certain applications on a certain workspace
 #assign [class="Xfce4-terminal"] $workspace1
 assign [class="qutebrowser"] $workspace2
-assign [class="Google-chrome"] $workspace4
+assign [class="Google-chrome"] $workspace12
+assign [class="Firefox"] $workspace13
 assign [class="Thunderbird"] $workspace5
 assign [class="Gimp"] $workspace6
 assign [class="vlc"] $workspace8
+assign [class="mpv"] $workspace8
 
 
 # reload the configuration file
@@ -205,12 +221,12 @@ bindsym $mod+Shift+Control+Down resize shrink height 10px or 10ppt
 bindsym $mod+Shift+Control+Right resize grow width 10px or 10ppt
 
 
-# title bar styling
-client.focused          #444455 #444455 #ffffff #2e9ef4   #222222
-client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
-client.unfocused        #222222 #222222 #888888 #292d2e   #222222
-client.urgent           #2f343a #900000 #ffffff #900000   #900000
-client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+# title bar styling			BORDER	BACKGR.	TEXT		INDICATOR	CHILD_BORDER
+client.focused          #000000 #000000 #ffffff #000000   #000000
+client.focused_inactive #000000 #000000 #ffffff #000000   #000000
+client.unfocused        #000000 #000000 #888888 #000000   #000000
+client.urgent           #000000 #000000 #ffffff #000000   #000000
+client.placeholder      #000000 #000000 #ffffff #000000   #000000
 
 new_window pixel 3
 
@@ -236,6 +252,10 @@ bar {
 				}
 }
 
+
+# Screenshot
+bindsym Print exec --no-startup-id scrot ~/Pictures/screenshots/'screenshot_%d-%m-%Y_%H:%m:%S.jpg'
+
 # Cmus controls
 bindsym $mod+BackSpace exec --no-startup-id cmus-remote --play 
 bindsym $mod+backslash exec --no-startup-id cmus-remote --pause
@@ -248,22 +268,13 @@ bindsym $mod+minus exec --no-startup-id cmus-remote --volume -5%
 
 # Pulse Audio keyboard controls
 set $sink `pactl list short sinks | grep RUNNING | cut -f1`
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume $sink +5%
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume $sink -5%
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume $sink +10%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume $sink -10%
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute $sink toggle
 
-#bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 --+10% && killall -SIGUSR1 i3status 
-
-#bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -- -10% && killall -SIGUSR1 i3status
-
-#bindsym $mod+KP_Add exec --no-startup-id pactl set-sink-volume 0 +5% #increase
-#sound volume bindsym $mod+KP_Subtract exec --no-startup-id pactl
-#set-sink-volume 0 -5% #decrease sound volume
-#bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
-
 # Sreen brightness controls
-bindsym XF86MonBrightnessUp exec brightness-up.sh
-bindsym XF86MonBrightnessDown exec brightness-down.sh
+bindsym XF86MonBrightnessUp exec --no-startup-id sudo /home/yann/scripts/brightness-up.sh
+bindsym XF86MonBrightnessDown exec --no-startup-id sudo /home/yann/scripts/brightness-down.sh
 
 
 # Auto Starts
@@ -289,9 +300,6 @@ exec --no-startup-id /usr/bin/pasystray
 # auto start network applet in bar
 exec --no-startup-id nm-applet --sm-disable
 
-# auto start network applet in bar
-#exec --no-startup-id xfce4-volumed
-
 # auto start xfce4-power-manager
 exec --no-startup-id xfce4-power-manager
 
@@ -311,4 +319,3 @@ exec --no-startup-id xset r rate 200 30
 exec_always --no-startup-id i3-msg 'workspace $workspace1' 
 
 # turn on num lock at login
-exec_always --no-startup-id exec numlockx on

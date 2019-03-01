@@ -22,7 +22,7 @@ if !has('gui_running')
   set t_Co=256
 endif
 
-colorscheme desert
+colorscheme koehler
 
 
 " Spaces & Tabs
@@ -48,7 +48,7 @@ hi LineNr  ctermfg=DarkGrey ctermbg=NONE
 set cursorline
 hi CursorLine  cterm=bold ctermbg=Black
 "style vertical split line:
-hi VertSplit  ctermfg=DarkGrey ctermbg=Black 
+hi VertSplit  ctermfg=Grey ctermbg=Black
 "set vertical split line character:
 set fillchars+=vert:#
 
@@ -58,7 +58,6 @@ set showmatch      "highlight matching bracket when cursor is on it
 set mouse=a				 "enable mouse support
 set wrap					 "text wrapping
 set tw=80					 "text width
-set showmatch			 "highlight matching brackets
 set colorcolumn=81 "display column at textwidth
 "style textwidth line:
 hi ColorColumn ctermbg=Black
@@ -109,10 +108,10 @@ inoremap jj <esc>
 autocmd InsertEnter * :let @/ = ""
 
 ".. and re-source .vimrc to fix the lightline losing color bug
-:map <Leader>w :w<CR>:source ~/.vimrc<CR>:noh<CR>:redraw!<CR>
+:map <Leader>w :w<CR>:noh<CR>:redraw!<CR>
 :map <Leader>x :q<CR>
 :map <Leader>/ :noh<CR>
-:map <Leader>g :Goyo<CR>:source ~/.vimrc<CR>
+:map <Leader>g :Goyo<CR>:so ~/.vimrc<CR>:redraw!<CR>
 :map tt :NERDTreeToggle<CR>
 vnoremap <C-C> :w !xclip -i -sel c<CR><CR>
 
@@ -213,7 +212,8 @@ Plug 'https://github.com/bling/vim-bufferline'
 Plug 'w0rp/ale'
 "Fuzzy file finder:
 Plug 'https://github.com/ctrlpvim/ctrlp.vim'
-
+"Live html, css and javascript editing
+Plug 'turbio/bracey.vim'
 
 "To do:
 " syntastic config

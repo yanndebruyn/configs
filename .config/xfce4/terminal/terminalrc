@@ -1,16 +1,15 @@
 [Configuration]
 BackgroundDarkness=1,000000
 DropdownHeight=97
-FontName=Monospace 10
 MiscAlwaysShowTabs=FALSE
 MiscBell=FALSE
 MiscBellUrgent=FALSE
 MiscBordersDefault=FALSE
-MiscCursorBlinks=FALSE
+MiscCursorBlinks=TRUE
 MiscCursorShape=TERMINAL_CURSOR_SHAPE_BLOCK
 MiscDefaultGeometry=80x24
 MiscInheritGeometry=FALSE
-MiscMenubarDefault=TRUE
+MiscMenubarDefault=FALSE
 MiscMouseAutohide=FALSE
 MiscMouseWheelZoom=TRUE
 MiscToolbarDefault=FALSE
@@ -31,9 +30,14 @@ DropdownWidth=100
 DropdownAlwaysShowTabs=FALSE
 DropdownStatusIcon=FALSE
 ScrollingBar=TERMINAL_SCROLLBAR_NONE
-BackgroundImageFile=/usr/share/xfce4/backdrops/336309-free-download-blue-grunge-background-1920x1080-download.jpg
-BackgroundImageShading=0,800000
-BackgroundImageStyle=TERMINAL_BACKGROUND_STYLE_CENTERED
+BackgroundImageFile=/home/yann/Pictures/wallpapers/icy-background-console.jpg
+BackgroundImageShading=0,750000
+BackgroundImageStyle=TERMINAL_BACKGROUND_STYLE_STRETCHED
 ColorPalette=rgb(25,25,35);rgb(204,0,0);rgb(78,154,6);rgb(196,160,0);rgb(52,101,164);rgb(117,80,123);rgb(6,152,154);rgb(172,172,172);rgb(80,80,90);rgb(239,41,41);rgb(138,226,52);rgb(226,207,53);rgb(115,159,207);rgb(173,127,168);rgb(52,226,226);rgb(238,238,236)
 ColorBackground=rgb(1,14,25)
+BackgroundMode=TERMINAL_BACKGROUND_IMAGE
+ColorCursorUseDefault=FALSE
+ColorCursorForeground=#7373d2d21616
+ColorCursor=#ffff00000000
+FontName=Monospace 11
 

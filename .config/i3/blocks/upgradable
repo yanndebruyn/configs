@@ -2,5 +2,4 @@
 
 echo $(expr `apt list --upgradable | wc -l` - 1)
 
-#cat ~/scripts/.updates
 
