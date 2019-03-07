@@ -1,0 +1,9 @@
+#!/bin/bash
+
+CONNECTION=$(ip link show | grep -i enp | grep -iv no-carrier | awk '{print$2}')
+
+if [ -z "$CONNECTION" ]; then
+	echo "DOWN" > /dev/null
+else
+	echo "$CONNECTION UP"
+fi

@@ -214,6 +214,8 @@ Plug 'w0rp/ale'
 Plug 'https://github.com/ctrlpvim/ctrlp.vim'
 "Live html, css and javascript editing
 Plug 'turbio/bracey.vim'
+"Eunuch - enables a set of bash commands from withing Vim
+Plug 'https://github.com/tpope/vim-eunuch.git'
 
 "To do:
 " syntastic config

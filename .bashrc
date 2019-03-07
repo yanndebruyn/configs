@@ -86,11 +86,6 @@ fi
 # colored GCC warnings and errors
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
-# some more ls aliases
-alias ll='ls -lF --group-directories'
-alias la='ls -lA --group-directories'
-alias l='ls -CF --group-directories'
-
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
@@ -134,5 +129,10 @@ PS1="\[\e]0;\u@\h:\w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;36m\][\[\033
 # Disable terminal freeze on pressing CTRL-s
 stty -ixon
 
-# feh alias
+# Custom aliases
+alias ll='ls -lF --group-directories'
+alias la='ls -lAF --group-directories'
+alias l='ls -CF --group-directories'
 alias feh='feh --image-bg black'
+alias gm='cd /media/yann'
+#alias rsync='rsync -avP'

@@ -1,0 +1,33 @@
+#!/bin/bash
+
+LAYOUT=$(setxkbmap -query | grep layout | awk '{print $2}')
+
+# Left click
+if [[ "${BLOCK_BUTTON}" -eq 1 ]]; then
+ if [[ "$LAYOUT" == "us" ]]; then
+
+	 setxkbmap be
+	 LAYOUT=$(setxkbmap -query | grep layout | awk '{print $2}')
+	 /home/yann/scripts/xmodmap.sh
+
+ elif [[ "$LAYOUT" == "be" ]]; then
+
+	 setxkbmap us
+	 LAYOUT=$(setxkbmap -query | grep layout | awk '{print $2}')
+	 /home/yann/scripts/xmodmap.sh
+
+ fi
+fi
+
+echo "$LAYOUT" | tr '[:lower:]' '[:upper:]'
+
+
+# Middle click
+#elif [[ "${BLOCK_BUTTON}" -eq 2 ]]; then
+#  amixer -q sset Master toggle
+# Right click
+#elif [[ "${BLOCK_BUTTON}" -eq 3 ]]; then
+#  amixer -q sset Master 5%-
+#fi
+
+

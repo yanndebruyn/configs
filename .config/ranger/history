@@ -1,50 +1,50 @@
-mkdir heartfeltwebsites.com
-mkdir yanndebruyn.com
-mkdir dezielsboom.com
-mkdir gitprojects
-shell git add .
-search .conf
-set colorscheme zenburn
-set colorscheme default
-rename Downloads
-rename AbrahamQ
-touch test
-search test
-open_with 
-help
-tab_new
-tab_new scripts
-tab_new ~/Documents
-
-search *.png
-search ranger
-mkdir
-rename history
-rename colorschemes
-mkdir 
-set viewmode multipane
-set viewmode miller
-rename i_am_the_universe.jpg
-rename reis
-rename conscious_universe.jpg
-shell feh -B black %f
-rename cons
-rename conscious_universe2.jpg
-rename levenslessen-presentatie.tex
-search dark
-search
-shell scr
-shell scrot -e 'mv $f ~/Pictures/screenshots/'
-rename bookmarks2.html
-rename bookmarks.html
-touch 
+rename videos
+rename videos_kleine_lori
+rename utilityy
+rename
+rename utility
+rename yann_oldstuff
+rename geboortekaartje_lïla
+rename abraham_stuff
+rename compositiess
+rename composities
+rename webdesign_photos
+rename luke_were_gonna_have_company.jpg
+rename router_serial_nummer.txt
+rename we_are_going_to_the_store.jpg
+search luke
+rename me_old
+rename avatars_and_funny
+rename pictures
+rename star_wars
+rename dvd_voetreflexologie
 rename 
-jkjj
+rename system_volume_information
+rename wd_disk_software
+rename seriess
+rename series
+rename musicc
+rename music
+rename filmss
+rename films
+rename backup
+rename backup_old
+rename 7 Habits of Highly Effectiveeople
+rename 7_habits_of
+rename 7_habits_of_highly_effective_people
+rename 7_habits_of_highly_effective_people_seminar
+find jj
+rename projects_old
+shell sudo rm -rf films_
+
+shell cd -
+search sudo
+search sudoers
+search sudoer
+mkdir /etc/
+mkdir etc
+shell chmod 644 sudoers
+shell sudo chmod 644 sudoers
+shell sudo chmod 666 sudoers
+rename .bashrc
 delete
-tab_new %f
-shell 
-find 
-find 1
-find Proof
-find Sa
-find j
