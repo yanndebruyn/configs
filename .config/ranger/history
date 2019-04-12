@@ -1,39 +1,3 @@
-rename videos
-rename videos_kleine_lori
-rename utilityy
-rename
-rename utility
-rename yann_oldstuff
-rename geboortekaartje_lïla
-rename abraham_stuff
-rename compositiess
-rename composities
-rename webdesign_photos
-rename luke_were_gonna_have_company.jpg
-rename router_serial_nummer.txt
-rename we_are_going_to_the_store.jpg
-search luke
-rename me_old
-rename avatars_and_funny
-rename pictures
-rename star_wars
-rename dvd_voetreflexologie
-rename 
-rename system_volume_information
-rename wd_disk_software
-rename seriess
-rename series
-rename musicc
-rename music
-rename filmss
-rename films
-rename backup
-rename backup_old
-rename 7 Habits of Highly Effectiveeople
-rename 7_habits_of
-rename 7_habits_of_highly_effective_people
-rename 7_habits_of_highly_effective_people_seminar
-find jj
 rename projects_old
 shell sudo rm -rf films_
 
@@ -47,4 +11,40 @@ shell chmod 644 sudoers
 shell sudo chmod 644 sudoers
 shell sudo chmod 666 sudoers
 rename .bashrc
+search gala
+shell df -h %f
+open_with j
+open_with mpv
+find 
+rename mmorpg3.jpg
+mkdir usb-stick
+rename levenslessen-presentatie.pdf_
+rename 8-vragen.odt
+rename 8-vragen.pdf
+rename enthousiasme_volgen.mp4
+mkdir Brain_Healing
+search tyrael
+search good
+rename angel.jpg
+search k
+mkdir favourites
+open_with a
+rename galaxy3.jpg
+rename temp.jpg
+rename galaxy.jpg
+rename galaxy2.jpg
+shell cd /usr/local/bin
+shell sudo rm youtube-dl
+rename youtube-dl
+shell mv YoutubeDL.py youtube-dl
+rename Rickie_Byars_The_Spirit_of_God_is_upon_Me.mp3
+rename Rickie_Byars_Alle-Alleluia.mkv
+rename Brain_Healing.mp4
+mkdir Rickie_Byars
+rename bashar.tex
+open_with 
+rename levenslessen-presentatie.pdf
 delete
+rename Wholly_Holy_Way.mp3
+rename 
+open_with 2

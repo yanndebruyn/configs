@@ -1,20 +1,25 @@
 #!/bin/bash
 
-INFO_CMUS=$(cmus-remote -Q 2>/dev/null)
-if [[ $? -eq 0 ]]; then
-  INFO_TITLE=$(echo "${INFO_CMUS}" | sed -n -e 's/^.*title//p' | head -n 1)
-  INFO_ALBUM=$(echo "${INFO_CMUS}" | sed -n -e 's/^.*album//p' | head -n 1)
-  INFO_ARTIST=$(echo "${INFO_CMUS}" | sed -n -e 's/^.*artist//p' | head -n 1)
-else
-  exit
+STATUS=$(cmus-remote -Q | grep -w 'status' | cut -d " " -f 2)
+ARTIST=$(cmus-remote -Q | grep -w 'artist' | cut -d " " -f 3-)
+ALBUM=$(cmus-remote -Q | grep -w 'album' | cut -d " " -f 3-)
+TITLE=$(cmus-remote -Q | grep -w 'title' | cut -d " " -f 3-)
+POSITION=$(cmus-remote -Q | grep -w 'position' | cut -d " " -f 2)
+
+if [ -z $(TITLE) ]; then
+	
+	if [[ $STATUS  = "playing"* ]]; then
+		echo -n "   " 
+	elif [[ $STATUS = "paused"* ]]; then
+		echo -n "    "
+	fi
+
+	if [ $(($POSITION / 60)) -lt 10 ]; then echo -n "0"; fi
+	echo -n "$(($POSITION / 60)):" 
+	if [ $(($POSITION % 60)) -lt 10 ]; then echo -n "0"; fi
+	echo -n "$(($POSITION % 60)) | $ARTIST - $ALBUM - $TITLE"
+
 fi
 
-if [[ "${INFO_ARTIST}" ]] && [[ "${INFO_TITLE}" ]]; then
-  OUT_TEXT="${INFO_ARTIST} - ${INFO_TITLE}"
-elif [[ "${INFO_TITLE}" ]]; then
-  OUT_TEXT="${INFO_TITLE}"
-fi
+unset TITLE
 
-echo "${OUT_TEXT}"
-echo "${OUT_TEXT}"
-exit

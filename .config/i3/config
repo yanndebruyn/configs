@@ -42,7 +42,7 @@ focus_follows_mouse no
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return workspace $workspace1; exec xfce4-terminal --hide-menubar --hide-toolbar -e tmux
+bindsym $mod+Return exec xfce4-terminal --hide-menubar --hide-toolbar -e tmux
 
 # exit i3
 bindsym $mod+Shift+Control+e exit
@@ -54,7 +54,7 @@ bindsym $mod+Shift+Control+p exec xfce4-terminal -e 'sudo shutdown -P now'
 bindsym $mod+Shift+Control+r exec xfce4-terminal -e 'reboot'
 
 #bindsym $mod+Shift+Control+x exec i3lock -i ~/Pictures/wallpapers/linuxmint.png
-bindsym $mod+Shift+Control+x exec i3lock --tiling --color=#222222 --image=~/Pictures/wallpapers/Photo-image-dark-wallpaper.png
+bindsym $mod+Shift+Control+x exec i3lock --tiling --color=#222222 --image=~/Pictures/wallpapers/galaxy.jpg
 
 # Toggle keyboard layout
 bindsym $mod+Control+k exec toggle_keyboard_layout.sh
@@ -114,11 +114,11 @@ bindsym $mod+Shift+a focus parent
 set $workspace0 "0:Laptop"
 set $workspace1 "1:Terminals"
 set $workspace2 "2:Firefox"
-set $workspace3 "3:Ranger"
-set $workspace4 "4:Docs"
+set $workspace3 "3:Files"
+set $workspace4 "4:Social"
 set $workspace5 "5:Mail"
 set $workspace6 "6:Gimp"
-set $workspace7 "7:Social"
+set $workspace7 "7:Docs"
 set $workspace8 "8:Media"
 set $workspace9 "9:Calendar"
 set $workspace10 "10:Organizer"
@@ -132,23 +132,25 @@ bindsym $mod+Control+w exec ~/scripts/dmenu_select_webdev.sh
 bindsym $mod+Control+s exec ~/scripts/dmenu_select_editscript.sh
 bindsym $mod+Control+Shift+s exec ~/scripts/dmenu_select_runscript.sh
 bindsym $mod+Control+u exec ~/scripts/dmenu_select_unmount.sh
-bindsym $mod+Control+Shift+U exec udiskie
+bindsym $mod+U exec udiskie
 bindsym $mod+r workspace $workspace3; exec xfce4-terminal -e ranger
-bindsym $mod+m workspace $workspace8; exec xfce4-terminal -e cmus
+bindsym $mod+m exec thunderbird
+bindsym $mod+Control+m exec firefox -new-window https://www.messenger.com/t/kenny.bruwier
+bindsym $mod+c workspace $workspace8; exec xfce4-terminal -e cmus
 bindsym $mod+x exec firefox
 bindsym $mod+q exec /home/yann/qtox/qtox
-bindsym $mod+Control+t exec thunderbird
-bindsym $mod+t exec trueconf
-bindsym $mod+g exec gimp
+bindsym $mod+t exec thunar
+bindsym $mod+Control+t exec trueconf
+bindsym $mod+Control+g exec gimp
 bindsym $mod+v exec vlc
-bindsym $mod+c exec google-chrome-stable
+bindsym $mod+g exec google-chrome-stable
 bindsym $mod+d exec firefox -new-window https://docs.google.com/document/
 bindsym $mod+o exec firefox -new-window https://docs.google.com/spreadsheets/d/1x6u9MuJdh-icI-1UPC7TRsg75CQdGAVHc_9amf_dPaA/edit#gid=583359177
 bindsym $mod+a exec firefox -new-window https://calendar.google.com/calendar/r
-bindsym $mod+Control+m exec firefox -new-window https://www.messenger.com/t/kenny.bruwier
 
 # Switch mono and dual monitor setup
-bindsym $mod+F11 exec xrandr --output LVDS-1 --primary --mode 1600x900 --pos 0x180 --rotate normal --output DP-1 --off --output HDMI-1 --off --output VGA-1 --off
+bindsym $mod+F10 exec xrandr --output LVDS-1 --primary --mode 1600x900 --pos 0x180 --rotate normal --output DP-1 --off --output HDMI-1 --off --output VGA-1 --off
+bindsym $mod+F11 exec xrandr --output VGA-1 --primary --mode 1920x1080 --pos 0x180 --rotate normal --output DP-1 --off --output HDMI-1 --off --output LVDS-1 --off
 bindsym $mod+F12 exec xrandr --output LVDS-1 --mode 1600x900 --pos 0x180 --rotate normal --output DP-1 --off --output HDMI-1 --off --output VGA-1 --primary --mode 1920x1080 --pos 1600x0 --rotate normal 
 
 
@@ -203,18 +205,19 @@ workspace $workspace12 output $PRIMARY
 workspace $workspace13 output $PRIMARY
 
 # Always open certain applications on a certain workspace
-#assign [class="Xfce4-terminal"] $workspace1
+assign [class="Thunar"] $workspace3
 assign [class="Firefox"] $workspace2
-assign [class="Google-chrome"] $workspace12
+assign [class="TrueConf"] $workspace4
+assign [class="qTox"] $workspace4
+for_window[title="Messenger"] move container to workspace $workspace4
 assign [class="Thunderbird"] $workspace5
-assign [class="Gimp"] $workspace6
-assign [class="qTox"] $workspace7
+exec assign [class="Gimp"] $workspace6
+for_window[title="Google Docs"] move container to workspace $workspace7
 assign [class="vlc"] $workspace8
 assign [class="mpv"] $workspace8
-for_window[title="Google Docs"] move container to workspace $workspace4
-for_window[title="Organizer Yann - Google Sheets"] move container to workspace $workspace10
 for_window[title="Google Calendar*"] move container to workspace $workspace9
-for_window[title="Messenger"] move container to workspace $workspace7
+for_window[title="Organizer Yann - Google Sheets"] move container to workspace $workspace10
+assign [class="Google-chrome"] $workspace12
 
 
 
@@ -238,7 +241,7 @@ bindsym $mod+Shift+Control+Right resize grow width 10px or 10ppt
 
 # title bar styling			BORDER	BACKGR.	TEXT		INDICATOR	CHILD_BORDER
 client.focused          #333344 #333344 #ffffff #000000   #000000
-client.focused_inactive #000000 #000000 #ffffff #000000   #000000
+client.focused_inactive #000000 #333344 #ffffff #000000   #000000
 client.unfocused        #000000 #111122 #aaaaaa #000000   #000000
 client.urgent           #000000 #000000 #ffffff #000000   #000000
 client.placeholder      #000000 #000000 #ffffff #000000   #000000
@@ -299,7 +302,7 @@ bindsym XF86MonBrightnessDown exec --no-startup-id sudo /home/yann/scripts/brigh
 exec_always --no-startup-id xrandr --output LVDS-1 --mode 1600x900 --pos 0x180 --rotate normal --output DP-1 --off --output HDMI-1 --off --output VGA-1 --primary --mode 1920x1080 --pos 1600x0 --rotate normal
 
 # auto start feh
-exec_always --no-startup-id feh --bg-fill ~/Pictures/wallpapers/dark-planet.jpg
+exec_always --no-startup-id feh --bg-fill ~/Pictures/wallpapers/earth.jpg
 
 # start scratchpad
 exec --no-startup-id xfce4-terminal --show-borders --role=dropdown -e 'tmux' & 
@@ -333,4 +336,8 @@ exec --no-startup-id xset r rate 200 30
 # start i3 on workspace1
 exec_always --no-startup-id i3-msg 'workspace $workspace1' 
 
-# turn on num lock at login
+# turn numlock on
+exec numlockx on
+
+# auto start clipit
+exec --no-startup-id clipit

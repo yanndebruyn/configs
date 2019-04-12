@@ -129,10 +129,39 @@ PS1="\[\e]0;\u@\h:\w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;36m\][\[\033
 # Disable terminal freeze on pressing CTRL-s
 stty -ixon
 
+# Custom variables
+h=/home/yann
+d=/home/yann/Documents
+D=/home/yann/Downloads
+p=/home/yann/Pictures
+W=/home/yann/Pictures/wallpapers
+v=/home/yann/Videos
+w=/home/yann/webdev_local
+s=/home/yann/scripts
+S=/home/yann/Pictures/screenshots
+r=/home/yann/git-repos
+l=/home/yann/Documents/levenslessen
+i=/home/yann/.config/i3
+m=/media/yann
+M=/home/yann/Music
+
 # Custom aliases
 alias ll='ls -lF --group-directories'
 alias la='ls -lAF --group-directories'
 alias l='ls -CF --group-directories'
 alias feh='feh --image-bg black'
+alias gh='cd /home/yann'
+alias gd='cd /home/yann/Documents'
+alias gD='cd /home/yann/Downloads'
+alias gp='cd /home/yann/Pictures'
+alias gW='cd /home/yann/Pictures/wallpapers'
+alias gv='cd /home/yann/Videos'
+alias gw='cd /home/yann/webdev_local'
+alias gs='cd /home/yann/scripts'
+alias gS='cd /home/yann/Pictures/screenshots'
+alias gr='cd /home/yann/git-repos'
+alias gl='cd /home/yann/Documents/levenslessen'
+alias gi='cd /home/yann/.config/i3'
 alias gm='cd /media/yann'
+alias gM='cd /home/yann/Music'
 #alias rsync='rsync -avP'
