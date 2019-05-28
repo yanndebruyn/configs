@@ -30,3 +30,5 @@ fi
 if [ -d "$HOME/scripts" ] ; then
     PATH="$HOME/scripts:$PATH"
 fi
+
+sudo kbdrate -r 30.0 -d 250 > /dev/null
