@@ -5,6 +5,6 @@
 XKBMODEL="pc105"
 XKBLAYOUT="us"
 XKBVARIANT="intl"
-XKBOPTIONS=""
+XKBOPTIONS="caps:ctrl_modifier"
 
 BACKSPACE="guess"
