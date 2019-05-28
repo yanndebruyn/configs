@@ -1,6 +1,6 @@
 [Configuration]
 BackgroundDarkness=1,000000
-DropdownHeight=97
+DropdownHeight=100
 MiscAlwaysShowTabs=FALSE
 MiscBell=FALSE
 MiscBellUrgent=FALSE
@@ -30,14 +30,14 @@ DropdownWidth=100
 DropdownAlwaysShowTabs=FALSE
 DropdownStatusIcon=FALSE
 ScrollingBar=TERMINAL_SCROLLBAR_NONE
-BackgroundImageFile=/home/yann/Pictures/wallpapers/icy-background-console.jpg
-BackgroundImageShading=0,750000
-BackgroundImageStyle=TERMINAL_BACKGROUND_STYLE_STRETCHED
+BackgroundImageFile=/home/yann/Pictures/wallpapers/metal-blue-abstract-4k-tm-2560x1440.jpg
 ColorPalette=rgb(25,25,35);rgb(204,0,0);rgb(78,154,6);rgb(196,160,0);rgb(52,101,164);rgb(117,80,123);rgb(6,152,154);rgb(172,172,172);rgb(80,80,90);rgb(239,41,41);rgb(138,226,52);rgb(226,207,53);rgb(115,159,207);rgb(173,127,168);rgb(52,226,226);rgb(238,238,236)
-ColorBackground=rgb(1,14,25)
-BackgroundMode=TERMINAL_BACKGROUND_IMAGE
+ColorBackground=#01b614a924b1
 ColorCursorUseDefault=FALSE
 ColorCursorForeground=#7373d2d21616
 ColorCursor=#ffff00000000
 FontName=Monospace 11
+BackgroundImageStyle=TERMINAL_BACKGROUND_STYLE_CENTERED
+BackgroundMode=TERMINAL_BACKGROUND_IMAGE
+BackgroundImageShading=0,420000
 

@@ -1,14 +1,3 @@
-rename projects_old
-shell sudo rm -rf films_
-
-shell cd -
-search sudo
-search sudoers
-search sudoer
-mkdir /etc/
-mkdir etc
-shell chmod 644 sudoers
-shell sudo chmod 644 sudoers
 shell sudo chmod 666 sudoers
 rename .bashrc
 search gala
@@ -44,7 +33,18 @@ mkdir Rickie_Byars
 rename bashar.tex
 open_with 
 rename levenslessen-presentatie.pdf
-delete
 rename Wholly_Holy_Way.mp3
 rename 
 open_with 2
+rename terminalrc.backup
+rename git-repos
+mkdir Video
+mkdir Marielle_Duindam_12-05-2019_Sparkle_Paradise_intro
+mkdir Marielle_Duindam_19-05-2019_Sparkle_Session
+mkdir renders
+rename music
+rename renders
+mkdir footage
+rename card2
+mkdir Photo
+delete

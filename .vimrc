@@ -49,6 +49,7 @@ set cursorline
 hi CursorLine  cterm=bold ctermbg=Black
 "style vertical split line:
 hi VertSplit  ctermfg=Grey ctermbg=Black
+
 "set vertical split line character:
 set fillchars+=vert:#
 
